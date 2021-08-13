@@ -19,7 +19,7 @@
 % Management Systems, Volume I, Battery Modeling," Artech House, 2015.
 
 function theParam = getParamESC(paramName,temp,model)
-  theFields = fields(model); % get list of fields stored in model
+  theFields = fieldnames(model); % get list of fields stored in model
   match = strcmpi(paramName,theFields); % see if any match desired data
   if ~match, % if not, throw an error
     error('Parameter "%s" does not exist in model',paramName);
